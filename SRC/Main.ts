@@ -4,6 +4,7 @@ import { BELEIDIGENDE_CONV } from "./FUNCTION/BELEIDIGENDE_CONV";
 import { MAMECHISHIKI } from "./FUNCTION/MAMECHISHIKI";
 import { CAT } from "./FUNCTION/CAT";
 import { HELP } from "./FUNCTION/HELP";
+import { LIKE } from "./FUNCTION/LIKE";
 const client = new Client({
 	checkUpdate: false
 }) as Client<true>;
@@ -39,7 +40,7 @@ client.on("messageCreate", async message => {
 			}
 			//好感度
 			if(CMD === "好感度"){
-				message.reply("じっそうちゅう");
+				new LIKE().Main(message);
 			}
 			//ヘルプ
 			if(CMD === "help"){
