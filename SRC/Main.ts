@@ -40,8 +40,12 @@ client.on("messageCreate", async message => {
 
 		//指定の鯖内か
 		if(message.inGuild() && CONFIG.GUILD.some((ROW) => ROW === message.guild.id)){
-			if(message.content.endsWith("う")){
+			if(message.content.match(/(う)(ー*)?$/)){
 				message.channel.send("んこ");
+			}
+
+			if(message.content.match(/(う)(ー*)?ん$/)){
+				message.channel.send("こ");
 			}
 		}
 	}catch(EX){
