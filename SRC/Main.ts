@@ -3,6 +3,7 @@ import { Client, type TextChannel, Intents } from "discord.js-selfbot-v13";
 import { BELEIDIGENDE_CONV } from "./FUNCTION/BELEIDIGENDE_CONV";
 import { MAMECHISHIKI } from "./FUNCTION/MAMECHISHIKI";
 import { CAT } from "./FUNCTION/CAT";
+import { HELP } from "./FUNCTION/HELP";
 const client = new Client({
 	checkUpdate: false
 }) as Client<true>;
@@ -35,6 +36,14 @@ client.on("messageCreate", async message => {
 			//豆知識
 			if(CMD === "豆知識"){
 				new MAMECHISHIKI().Main(message);
+			}
+			//好感度
+			if(CMD === "好感度"){
+				message.reply("じっそうちゅう");
+			}
+			//ヘルプ
+			if(CMD === "help"){
+				new HELP().Main(message);
 			}
 		}
 
