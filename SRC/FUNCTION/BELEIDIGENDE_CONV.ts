@@ -19,7 +19,7 @@ const BELEIDIGENDE_LIST_ARRAY:BELEIDIGENDE_LIST[] = [
 		OLD:/(死|し)ね/g,
 		NEW:"にゃ"
 	},{
-		OLD:/(殺|こ|コ)(ろ|ロ|)(す|ス)/g,
+		OLD:/(殺|こ|コ)(す|ろ|ロ)(|す|ス)/g,
 		NEW:"喰う"
 	},{
 		OLD:/(ゴ|ご)(ミ|み)/g,

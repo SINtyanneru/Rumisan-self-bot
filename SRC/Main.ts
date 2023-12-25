@@ -39,7 +39,7 @@ client.on("messageCreate", async message => {
 		}
 
 		//指定の鯖内か
-		if(message.inGuild() && CONFIG.GUILD.some((ROW) => ROW === message.guild.id)){
+		if(message.inGuild() && CONFIG.GUILD.some((ROW) => ROW === message.guild.id) && message.author.id !== client.user.id){
 			if(message.content.match(/(う)(ー*)?$/)){
 				message.channel.send("んこ");
 			}
