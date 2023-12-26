@@ -48,8 +48,10 @@ export class LIKE{
 
 		//値が有るか
 		if(USER_LIKE_DATA){
-			message.reply("好感度：100中" + USER_LIKE_DATA.好感度 + "\n"+
-						"信頼度：100中" + USER_LIKE_DATA.信頼度 + "\n");
+			message.reply("好感度：100/" + USER_LIKE_DATA.好感度 + "\n"+
+						"信頼度：100/" + USER_LIKE_DATA.信頼度 + "\n"+
+						"※日本式表記なので、一般的な分数表記と逆です"
+			);
 		}else{
 			message.reply("お前誰だよ");
 		}
