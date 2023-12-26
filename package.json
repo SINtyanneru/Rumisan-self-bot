@@ -12,6 +12,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "discord-api-types": "^0.37.66",
     "discord.js-selfbot-v13": "^2.15.0"
   }
 }
