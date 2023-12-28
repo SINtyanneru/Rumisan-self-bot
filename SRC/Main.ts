@@ -44,10 +44,10 @@ client.on("messageCreate", async message => {
 
 client.login(CONFIG.DISCORD.TOKEN);
 
-function MY_MSG(message:Message){
+async function MY_MSG(message:Message){
 	if(message.inGuild() && CONFIG.GUILD.some((ROW) => ROW === message.guild.id)){
-		new BELEIDIGENDE_CONV().Main(message);
-		new CAT().Main(message);
+		await new BELEIDIGENDE_CONV().Main(message);
+		await new CAT().Main(message);
 	}
 }
 
