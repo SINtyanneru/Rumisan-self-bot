@@ -82,6 +82,12 @@ async function ETC_MSG(message:Message){
 
 	//指定の鯖内か
 	if(message.inGuild() && CONFIG.GUILD.some((ROW) => ROW === message.guild.id) && message.author.id !== client.user.id){
+		/*絶対起動するな
+		if(message.content.match(/んこ$/)){
+			await message.channel.send("う");
+		}
+		*/
+		
 		if(message.content.match(/(う)(ー*)?$/)){
 			await message.channel.send("んこ");
 		}
