@@ -36,7 +36,7 @@ client.on("messageCreate", async message => {
 		}
 
 		//他人の投稿
-		ETC_MSG(message);
+		await ETC_MSG(message);
 	}catch(EX){
 		console.log(EX);
 	}
@@ -51,7 +51,7 @@ async function MY_MSG(message:Message){
 	}
 }
 
-function ETC_MSG(message:Message){
+async function ETC_MSG(message:Message){
 	//ブロックしてるかチェック
 	const USER_BLOCKED = RELATIONSHIPS_LIST.some((ROW) => ROW.type === 2 && ROW.user.id === message.author.id);
 	if(USER_BLOCKED){
@@ -83,11 +83,11 @@ function ETC_MSG(message:Message){
 	//指定の鯖内か
 	if(message.inGuild() && CONFIG.GUILD.some((ROW) => ROW === message.guild.id) && message.author.id !== client.user.id){
 		if(message.content.match(/(う)(ー*)?$/)){
-			message.channel.send("んこ");
+			await message.channel.send("んこ");
 		}
 
 		if(message.content.match(/(う)(ー*)?ん$/)){
-			message.channel.send("こ");
+			await message.channel.send("こ");
 		}
 	}
 }
