@@ -10,7 +10,9 @@ export class CAT{
 
 		//なをにゃに
 		MSG_TEXT = MSG_TEXT.replaceAll("な", "にゃ");
-		MSG_TEXT = MSG_TEXT.replaceAll("na", "nja");
+		MSG_TEXT = MSG_TEXT.replaceAll("na", "ña");
+		MSG_TEXT = MSG_TEXT.replaceAll("Na", "Ña");
+		MSG_TEXT = MSG_TEXT.replaceAll("NA", "ÑA");
 
 		if(message.content !== MSG_TEXT){
 			await message.edit(MSG_TEXT);
