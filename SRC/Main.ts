@@ -101,3 +101,12 @@ async function ETC_MSG(message:Message){
 		}
 	}
 }
+
+//メッセージが消された
+client.on("messageDelete", async deletedMessage => {
+	if(deletedMessage.author?.id){
+		deletedMessage.channel.send({
+			content:deletedMessage.content
+		});
+	}
+});
