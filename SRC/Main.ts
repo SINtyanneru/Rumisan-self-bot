@@ -103,7 +103,7 @@ async function ETC_MSG(message:Message){
 	}
 
 	if(message.channel.id === "1177603071371657239" && message.author.id !== client.user.id){
-		message.reply("?");
+		//message.reply("?");
 	}
 }
 
