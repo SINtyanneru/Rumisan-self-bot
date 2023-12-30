@@ -95,5 +95,9 @@ async function ETC_MSG(message:Message){
 		if(message.content.match(/(う)(ー*)?ん$/)){
 			await message.channel.send("こ");
 		}
+
+		if(message.content.match(/(p)$/)){
+			await message.channel.send("oop");
+		}
 	}
 }
