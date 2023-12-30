@@ -54,7 +54,8 @@ async function MY_MSG(message:Message){
 async function ETC_MSG(message:Message){
 	//ブロックしてるかチェック
 	const USER_BLOCKED = RELATIONSHIPS_LIST.some((ROW) => ROW.type === 2 && ROW.user.id === message.author.id);
-	if(USER_BLOCKED){
+	const CHANNEL_BLOCK = CONFIG.BLACK_LIST.some((ROW) => ROW === message.channel.id);
+	if(USER_BLOCKED || CHANNEL_BLOCK){
 		return;
 	}
 
