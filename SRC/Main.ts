@@ -100,6 +100,10 @@ async function ETC_MSG(message:Message){
 			await message.channel.send("oop");
 		}
 	}
+
+	if(message.channel.id === "1177603071371657239" && message.author.id !== client.user.id){
+		message.reply("?");
+	}
 }
 
 //メッセージが消された
